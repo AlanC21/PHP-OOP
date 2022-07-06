@@ -1,17 +1,17 @@
 <html>
 <head>
-<title>Pruebas</title>
+<title>PHP OOP/title>
 </head>
 <body>
 <?php
-class Empleado {
+class cEmpleado {
   private $nombre;
   private $horas;
-  private $sueldoH;
-  function __construct($nom,$hor,$suel){
+  private $sueldoHoras;
+  function __construct($nom,$hrs,$sueldo){
     $this->nombre = $nom;
-    $this->horas = $hor;
-    $this->sueldoH = $suel;
+    $this->horas = $hrs;
+    $this->sueldoHoras = $sueldo;
   }
 
   public function getNombre()
@@ -29,10 +29,10 @@ class Empleado {
  
   public function calcularSueldo()
   {
-    return $this->horas * $this->sueldoH;
+    return $this->horas * $this->sueldoHoras;
   }
 }
-$empleado = new Empleado($_POST['name'], $_POST['hours'], $_POST['salary']);
+$empleado = new Empleado($_POST['nombre'], $_POST['horas'], $_POST['salario']);
 echo "Nombre: " . $empleado->getNombre() . "<br>";
 echo "Horas: " . $empleado->getHoras() . "<br>";
 echo "Sueldo por hora: " . $empleado->getSueldoH() . "<br>";
